@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Indie+Flower&family=Quicksand&display=swap');
+:root{
+    --mainBg: #fafafa;
+    --asideBg: #b35059;
+    --asideColor: #1d3b66;
+    --mainColor: #f38945;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Aside */
+
+aside{
+    padding: 30px;
+    background-color: var(--asideBg);  
+
+    min-width: 20vw;
+}
+
+h3{
+    font-size: 1.8rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+ul li{
+    display: flex;
+    font-size: 1.3rem;
+    padding: 8px;
+    list-style-type: none;
+    cursor: pointer;
+    transition-duration: 300ms;
+    margin: 5px;
+    border-radius: 5px;
+    align-items: center;
+} 
+
+.active{
+    background-color: var(--asideColor);
+    color: var(--mainBg);
+    fill: var(--mainBg);
+    border-left: 5px solid var(--mainColor);
+}
+
+ul li:hover{
+    background-color: var(--asideColor);
+    color: var(--mainBg);
+    fill: var(--mainBg);
+} 
+
+ul li svg{
+    margin-right: 10px;
+}
+
+/* Main */
+
+main{
+    background-color: var(--mainBg);
+    width: 100%;
+
+}
+
+.currentView{
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  
+    .container{
+        flex-direction: column;
+    }
+  }

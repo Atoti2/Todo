@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Indie+Flower&family=Quicksand&display=swap');
+
 :root{
     --mainBg: #fafafa;
     --asideBg: #b35059;
@@ -79,6 +80,90 @@ main{
     text-align: center;
     font-size: 2rem;
     margin: 30px;
+    align-items: center;
+}
+
+#tasks{
+    margin: 1%;
+    gap: 12px;
+}
+
+.task svg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.task{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 1%;
+    background-color: var(--asideColor);
+    color: var(--mainBg);
+    fill: var(--mainBg);
+    display: flex;
+    justify-content: space-between;
+}
+
+#taskName{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.right{
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+#doneButton{
+    padding: 5px;
+    background-color: var(--asideBg);
+    color: var(--mainBg);
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 200ms;
+}
+#doneButton:hover{
+    transform: translateY(-3px);
+}
+
+.addTask{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+.addTask:hover{
+    transform: translateY(-5px);
+}
+
+#title, #prio, #due{
+    border-radius: 5px;
+    padding: 7px;
+    border: none;
+}
+
+#taskAdd{
+    margin: 1%;
+    display: none;
+}
+
+#error{
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {

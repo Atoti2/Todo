@@ -121,7 +121,7 @@ main{
     gap: 5px;
 }
 
-#doneButton{
+#doneButton, #doneButtonEdit{
     padding: 5px;
     background-color: var(--asideBg);
     color: var(--mainBg);
@@ -131,7 +131,7 @@ main{
     border-radius: 5px;
     transition-duration: 200ms;
 }
-#doneButton:hover{
+#doneButton:hover, #doneButtonEdit:hover{
     transform: translateY(-3px);
 }
 
@@ -149,7 +149,7 @@ main{
     transform: translateY(-5px);
 }
 
-#title, #prio, #due{
+#title, #prio, #due, #editDue, #editPrio, #editTitle{
     border-radius: 5px;
     padding: 7px;
     border: none;
@@ -160,14 +160,22 @@ main{
     display: none;
 }
 
+#taskEdit{
+    margin: 1%
+}
+
 #error{
+    margin-left: 15px;
     color: red;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
-  
+@media only screen and (max-width: 840px) {
+    .task{
+        flex-direction: column;
+    }
+    
     .container{
         flex-direction: column;
     }

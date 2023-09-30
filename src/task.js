@@ -1,17 +1,13 @@
 const { v4: uuidv4 } = require('uuid');
 export class Task{
-    constructor(id, title, priority, due, completed = false){
+    constructor(id, title, priority, due, completed = false, project){
         this._id = id;
         this._title = title;
         this._priority = priority;
         this._due = due;
         this._completed = completed
+        this._project = project
     }
-
-    toggleComplete(){
-        this.completed = !this.completed
-    }
-
 }
 
 class TodoList{
@@ -19,9 +15,9 @@ class TodoList{
         this.tasks = []
     }
 
-    addTask(title, priority, due){
+    addTask(title, priority, due, completed, project){
         const id = uuidv4();
-        const task = new Task(id, title, priority, due)
+        const task = new Task(id, title, priority, due, completed, project)
         this.tasks.push(task)
     }
 
@@ -44,9 +40,10 @@ class TodoList{
     toggleTaskCompletion(id){
         const task = this.tasks.find(task => task._id === id)
         if(task){
-            task.toggleComplete()
+            task._completed = !task._completed
         }
     }
+
 }
 
 export default TodoList

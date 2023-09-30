@@ -144,6 +144,7 @@ main{
     font-size: 1.1rem;
     cursor: pointer;
     transition-duration: 200ms;
+    display: none;
 }
 .addTask:hover{
     transform: translateY(-5px);
@@ -169,6 +170,54 @@ main{
     color: red;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.done{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.notDone{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: green;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.projectAdd{
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--asideColor);
+    color: var(--mainBg);
+    font-weight: bold;
+    transition-duration: 200ms;
+}
+.projectAdd:hover{
+    transform: translateY(-5px);
+}
+
+.visible{
+    visibility: hidden;
+}
+
+.newProject{
+    padding: 8px;
+    background-color: var(--mainBg);
+    border: 1px solid var(--asideBg);
+    border-radius: 8px;
+}
+.newProject:focus{
+    outline: none;
 }
 
 @media only screen and (max-width: 840px) {

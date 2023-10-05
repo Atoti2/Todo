@@ -11,7 +11,7 @@ class ProjectList{
     constructor(){
         this.projects = [
             {
-                id: 1,
+                _id: 1,
                 _title: "Gym",
             }
         ]

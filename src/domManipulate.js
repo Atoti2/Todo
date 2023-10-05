@@ -16,7 +16,6 @@ const delProject = document.getElementById("delProject");
 
 let todayList = []
 let weekList = []
-let fav = []
 
 function domChange() {
   changeCurrent();
@@ -33,6 +32,9 @@ function domChange() {
 let todos = new TodoList();
 let projects = new ProjectList();
 
+if(!localStorage.todo){
+  setLocalStorage()
+}
 getLocalStorage();
 renderTodos(todos.tasks);
 renderProjects();
@@ -87,6 +89,7 @@ function newTask() {
 function setLocalStorage() {
   localStorage.setItem("todo", JSON.stringify(todos.tasks));
 }
+setLocalStorage()
 
 function getLocalStorage() {
   todos.tasks = JSON.parse(localStorage.getItem("todo"));
@@ -323,6 +326,7 @@ function renderProjects() {
 
 
 function renderTodos(list) {
+
   getLocalStorage();
   tasks.innerHTML = "";
   list.forEach((todo) => {

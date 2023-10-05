@@ -12,7 +12,9 @@ export class Task{
 
 class TodoList{
     constructor(){
-        this.tasks = []
+        this.tasks = [
+            
+        ]
     }
 
     addTask(title, priority, due, completed, project){

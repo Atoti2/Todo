@@ -41,7 +41,7 @@ if(!localStorage.project){
 getLocalStorage();
 getLocalStorageProject()
 renderTodos(todos.tasks);
-renderProjects();
+renderProjects(projects.projects);
 
 const calendars = document.querySelectorAll(".calendar");
 function changeCurrent() {
@@ -166,7 +166,7 @@ delProject.addEventListener('click', (e) => {
         let targetId = p._id
         projects.deleteProject(targetId)
         setLocalStorageProject()
-        renderProjects()
+        renderProjects(projects.projects);
         console.log(projects);
       }
     })
@@ -315,14 +315,14 @@ function addProject() {
     newP.classList.toggle("visible");
     projectAdd.classList.toggle("visible");
     setLocalStorageProject();
-    renderProjects();
+    renderProjects(projects.projects);
   });
 }
 
-function renderProjects() {
+function renderProjects(project) {
   getLocalStorageProject();
   projectLi.innerHTML = "";
-  projects.projects.forEach((project) => {
+  project.forEach((project) => {
     projectLi.innerHTML += `
     <li class="calendar"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>${project._title}</li>`;
   });

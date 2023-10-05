@@ -35,6 +35,9 @@ let projects = new ProjectList();
 if(!localStorage.todo){
   setLocalStorage()
 }
+if(!localStorage.project){
+  setLocalStorageProject()
+}
 getLocalStorage();
 renderTodos(todos.tasks);
 renderProjects();

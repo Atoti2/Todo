@@ -32,10 +32,10 @@ function domChange() {
 let todos = new TodoList();
 let projects = new ProjectList();
 
-if(!localStorage.todo){
+if(!sessionStorage.todo){
   setLocalStorage()
 }
-if(!localStorage.project){
+if(!sessionStorage.project){
   setLocalStorageProject()
 }
 getLocalStorage();
@@ -91,20 +91,20 @@ function newTask() {
 }
 
 function setLocalStorage() {
-  localStorage.setItem("todo", JSON.stringify(todos.tasks));
+  sessionStorage.setItem("todo", JSON.stringify(todos.tasks));
   
 }
 
 function getLocalStorage() {
-  todos.tasks = JSON.parse(localStorage.getItem("todo"));
+  todos.tasks = JSON.parse(sessionStorage.getItem("todo"));
 }
 
 function setLocalStorageProject() {
-  localStorage.setItem("project", JSON.stringify(projects.projects));
+  sessionStorage.setItem("project", JSON.stringify(projects.projects));
 }
 
 function getLocalStorageProject() {
-  projects.projects = JSON.parse(localStorage.getItem("project"));
+  projects.projects = JSON.parse(sessionStorage.getItem("project"));
 }
 
 

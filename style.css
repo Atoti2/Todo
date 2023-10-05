@@ -219,6 +219,22 @@ main{
 .newProject:focus{
     outline: none;
 }
+.empty{
+    text-align: center;
+}
+#delProject{
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--asideColor);
+    color: var(--mainBg);
+    font-size: 1.1rem;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+#delProject:hover{
+    transform: scale(1.05);
+}
 
 @media only screen and (max-width: 840px) {
     .task{

@@ -92,8 +92,8 @@ function newTask() {
 
 function setLocalStorage() {
   localStorage.setItem("todo", JSON.stringify(todos.tasks));
+  
 }
-setLocalStorage()
 
 function getLocalStorage() {
   todos.tasks = JSON.parse(localStorage.getItem("todo"));

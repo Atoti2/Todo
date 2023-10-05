@@ -39,6 +39,7 @@ if(!localStorage.project){
   setLocalStorageProject()
 }
 getLocalStorage();
+getLocalStorageProject()
 renderTodos(todos.tasks);
 renderProjects();
 
